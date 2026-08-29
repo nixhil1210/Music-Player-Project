@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BeatBox | My Music Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="top-bar">
+    <a class="logo" href="#">♫ BeatBox</a>
+    <p style="font-size: 20px;">♫ ♫ ♫ </p>
+  </header>
+
+  <main class="container">
+
+    <section class="intro">
+      <p class="eyebrow">MY PLAYLIST</p>
+      <h1>Songs I like.</h1>
+      <p>Some old classics, some new favorites.</p>
+    </section>
+
+    <section class="player">
+
+      <div class="now-playing">
+        <div class="cover">
+          <img id="album-art" src="images/beautiful-things.png" alt="Album artwork">
+        </div>
+
+        <div class="details">
+          <p class="playing-label">NOW PLAYING</p>
+          <h2 id="song-title">Beautiful Things</h2>
+          <p id="artist-name">Benson Boone</p>
+
+          <div class="progress-area">
+            <div class="time">
+              <span id="current-time">0:00</span>
+              <span id="duration">0:00</span>
+            </div>
+            <input id="progress" type="range" min="0" max="100" value="0">
+          </div>
+
+          <div class="controls">
+            <button id="shuffle" class="icon-btn" title="Shuffle">↝</button>
+            <button id="previous" class="icon-btn" title="Previous">|◀</button>
+            <button id="play" class="play-btn" title="Play">▶</button>
+            <button id="next" class="icon-btn" title="Next">▶|</button>
+            <button id="repeat" class="icon-btn" title="Repeat">↻</button>
+          </div>
+
+          <div class="volume">
+            <button id="mute" title="Mute">🔊</button>
+            <input id="volume" type="range" min="0" max="1" step="0.01" value="1">
+          </div>
+
+          <div class="options">
+            <button id="autoplay" class="pill">Autoplay: Off</button>
+            <button id="favorite" class="pill">♡ Favorite</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="playlist">
+        <div class="playlist-title">
+          <div>
+            <p class="playing-label">PLAYLIST</p>
+            <h2>My Songs</h2>
+          </div>
+          <span id="song-count">8 songs</span>
+        </div>
+
+        <div id="song-list">
+
+          <button class="song-card active"
+            data-index="0"
+            data-title="Beautiful Things"
+            data-artist="Benson Boone"
+            data-image="images/beautiful-things.png"
+            data-audio="music/beautiful-things.mp3">
+            <img src="images/beautiful-things.png" alt="">
+            <span class="song-info"><strong>Beautiful Things</strong><small>Benson Boone</small></span>
+            <span class="number">01</span>
+          </button>
+
+          <button class="song-card"
+            data-index="1"
+            data-title="Birds of a Feather"
+            data-artist="Billie Eilish"
+            data-image="images/birds-of-a-feather.webp"
+            data-audio="music/birds-of-a-feather.mp3">
+            <img src="images/birds-of-a-feather.webp" alt="">
+            <span class="song-info"><strong>Birds of a Feather</strong><small>Billie Eilish</small></span>
+            <span class="number">02</span>
+          </button>
+
+          <button class="song-card"
+            data-index="2"
+            data-title="Hai Apna Dil To Awara"
+            data-artist="Hemant Kumar"
+            data-image="images/hai-apna-dil-toh-awara.jpg"
+            data-audio="music/hai-apna-dil-toh-awara.mp3">
+            <img src="images/hai-apna-dil-toh-awara.jpg" alt="">
+            <span class="song-info"><strong>Hai Apna Dil To Awara</strong><small>Hemant Kumar</small></span>
+            <span class="number">03</span>
+          </button>
+
+          <button class="song-card"
+            data-index="3"
+            data-title="In Ankhon Ki Masti"
+            data-artist="Asha Bhosle"
+            data-image="images/in-ankhon-ki-masti.jpg"
+            data-audio="music/in-ankhon-ki-masti.mp3">
+            <img src="images/in-ankhon-ki-masti.jpg" alt="">
+            <span class="song-info"><strong>In Ankhon Ki Masti</strong><small>Asha Bhosle</small></span>
+            <span class="number">04</span>
+          </button>
+
+          <button class="song-card"
+            data-index="4"
+            data-title="Mera Joota Hai Japani"
+            data-artist="Mukesh"
+            data-image="images/mera-joota-hai-japani.jpg"
+            data-audio="music/mera-joota-hai-japani.mp3">
+            <img src="images/mera-joota-hai-japani.jpg" alt="">
+            <span class="song-info"><strong>Mera Joota Hai Japani</strong><small>Mukesh</small></span>
+            <span class="number">05</span>
+          </button>
+
+          <button class="song-card"
+            data-index="5"
+            data-title="O Mungada Mungada"
+            data-artist="Usha Mangeshkar"
+            data-image="images/tu-mungada-mungada.jpg"
+            data-audio="music/tu-mungada-mungada.mp3">
+            <img src="images/tu-mungada-mungada.jpg" alt="">
+            <span class="song-info"><strong>O Mungada Mungada</strong><small>Usha Mangeshkar
+            </small></span>
+            <span class="number">06</span>
+          </button>
+
+          <button class="song-card"
+            data-index="6"
+            data-title="Safarnama"
+            data-artist="Lucky Ali"
+            data-image="images/safarnama.jpg"
+            data-audio="music/safarnama.mp3">
+            <img src="images/safarnama.jpg" alt="">
+            <span class="song-info"><strong>Safarnama</strong><small>Lucky Ali</small></span>
+            <span class="number">07</span>
+          </button>
+
+          <button class="song-card artwork-only"
+            data-index="7"
+            data-title="Lag Ja Gale"
+            data-artist="Lata Mangeshkar"
+            data-image="images/lag-ja-gale.png"
+            data-audio="music/Lag Jaa Gale.mp3">
+            <img src="images/lag-ja-gale.png" alt="">
+            <span class="song-info"><strong>Lag Ja Gale</strong><small>Lata Mangeshkar</small></span>
+            <span class="number">08</span>
+          </button>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="bottom-note">
+      <div>🎧 <strong>Simple controls</strong><span>Play, pause & skip</span></div>
+      <div>📱 <strong>Works on mobile</strong><span>Responsive layout</span></div>
+      <div>♥ <strong>Favorites</strong><span>Keep your picks</span></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>♫ BeatBox</span>
+  </footer>
+
+  <audio id="audio"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
